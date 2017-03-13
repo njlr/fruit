@@ -1,0 +1,7 @@
+{
+  "name": "fruit",
+  "dependencies": {
+    "boost-unordered": "1.63.0",
+    "boost-integer": "1.63.0"
+  }
+}

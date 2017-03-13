@@ -1,0 +1,39 @@
+cxx_binary(
+  name = 'simple-injection',
+  header_namespace = '',
+  headers = subdir_glob([
+    ('', '*.h'),
+  ]),
+  srcs = glob([
+    '*.cpp',
+  ],
+  excludes = glob([
+    'main_v1.cpp',
+  ])),
+  compiler_flags = [
+    '-std=c++14',
+  ],
+  deps = [
+    '//:fruit',
+  ],
+)
+
+cxx_binary(
+  name = 'simple-injection-v1',
+  header_namespace = '',
+  headers = subdir_glob([
+    ('', '*.h'),
+  ]),
+  srcs = glob([
+    '*.cpp',
+  ],
+  excludes = glob([
+    'main.cpp',
+  ])),
+  compiler_flags = [
+    '-std=c++14',
+  ],
+  deps = [
+    '//:fruit',
+  ],
+)
